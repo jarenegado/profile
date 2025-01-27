@@ -4,25 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Travel Adventures</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('ja19.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        .nav-button {
+            background: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .nav-button:hover {
+            background: #ff4500;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="2 copy.png" alt="My Travel Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home" class="nav-button">Home</a></li>
-                <li><a href="#gallery" class="nav-button">Gallery</a></li>
-                <li><a href="#blog" class="nav-button">Blog</a></li>
-                <li><a href="#contact" class="nav-button">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Explore the World with Me</h1>
-        <p>Join my journey as I capture the beauty of different places.</p>
-    </section>
-    <script>
-        document.body.style.backgroundImage = "url('ja19.jpg')";
-    </script>
+    <div class="container">
+        <header>
+            <img src="2 copy.png" alt="My Travel Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-button">Home</a></li>
+                    <li><a href="#gallery" class="nav-button">Gallery</a></li>
+                    <li><a href="#blog" class="nav-button">Blog</a></li>
+                    <li><a href="#contact" class="nav-button">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1>Explore the World with Me</h1>
+            <p>Join my journey as I capture the beauty of different places.</p>
+        </section>
+    </div>
 </body>
 </html>
