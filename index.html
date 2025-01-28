@@ -48,6 +48,29 @@
             transform: scale(1.1);
         }
         
+        .gallery-section {
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.1);
+        
          body {
             font-family: Broadway, sans-serif;
             margin: 0;
@@ -96,6 +119,27 @@
             <p><em>Embark on a journey where every place tells a story.</em></p>
         </section>
     </div>
+    
+        <section id="gallery" class="gallery-section">
+            <h2>My Travel Gallery</h2>
+            <div class="gallery-grid">
+                <img src="image1.jpg" alt="Travel Image 1">
+                <img src="image2.jpg" alt="Travel Image 2">
+                <img src="image3.jpg" alt="Travel Image 3">
+                <img src="image4.jpg" alt="Travel Image 4">
+                <img src="image5.jpg" alt="Travel Image 5">
+            </div>
+        </section>
+    </div>
+    
+    <script>
+       
+        document.querySelector(".nav-button[href='#gallery']").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector("#gallery").style.display = "block";
+            document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
      <div class= "footer">
         <p>&copy; 2025 Janice Travels. All Rights Reserved.</p>
         <p>
