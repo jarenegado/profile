@@ -46,31 +46,7 @@
         .nav-button:hover {
             background: #ff4500;
             transform: scale(1.1);
-        }
-        
-        .gallery-section {
-            padding: 20px;
-            text-align: center;
-            display: none;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            max-width: 800px;
-            margin: auto;
-        }
-        
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .gallery-grid img:hover {
-            transform: scale(1.1);
-        
+               
          body {
             font-family: Broadway, sans-serif;
             margin: 0;
@@ -99,6 +75,30 @@
         footer a:hover {
             text-decoration: underline;
         }
+             }
+        
+        .gallery-section {
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.1);
     </style>
 </head>
 <body>
@@ -118,6 +118,7 @@
             <h1>Unveiling the World, One Step at a Time</h1>
             <p><em>Embark on a journey where every place tells a story.</em></p>
         </section>
+
     </div>
     </script>
      <div class= "footer">
@@ -129,6 +130,7 @@
             <a href="mailto:janice.renegado@outlook.com">Email Me</a>
         </p>
      </div>
+    
         <section id="gallery" class="gallery-section">
             <h2>My Travel Gallery</h2>
             <div class="gallery-grid">
@@ -160,11 +162,11 @@
     
     <script>
        
-        document.querySelector(".nav-button[href='#gallery']").addEventListener("click", function(event) {
+            document.querySelector(".nav-button[href='#gallery']").addEventListener("click", function(event) {
             event.preventDefault();
             document.querySelector("#gallery").style.display = "block";
             document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
         });
-    
+     </script>
 </body>
 </html>
