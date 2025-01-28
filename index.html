@@ -50,42 +50,6 @@
             transform: scale(1.1);
         }
                     
-             .gallery-section {
-            padding: 20px;
-            text-align: center;
-            display: none;
-             }
-        
-         .stacked-images {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            display: none;
-        }
-        
-        .stacked-images img {
-            position: absolute;
-            width: 40px;
-            opacity: 0.8;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .stacked-images img:hover {
-            transform: scale(1.1);
-        }
-        
-        .stacked-images img:nth-child(1) { top: 10%; left: 5%; }
-        .stacked-images img:nth-child(2) { top: 15%; right: 5%; }
-        .stacked-images img:nth-child(3) { bottom: 10%; left: 10%; }
-        .stacked-images img:nth-child(4) { bottom: 15%; right: 10%; }
-        .stacked-images img:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-
         .back-button {
             background: #333;
             color: white;
@@ -133,16 +97,7 @@
         }
         
     </style>
-     <script>
-            function toggleGallery() {
-            var stackedImages = document.querySelector('.stacked-images');
-            if (stackedImages.style.display === 'none' || stackedImages.style.display === '') {
-                stackedImages.style.display = 'block';
-            } else {
-                stackedImages.style.display = 'none';
-            }
-        }
-     </script>
+    
 </head>
 <body>
     <div class="container">
@@ -151,7 +106,7 @@
             <nav>
                 <p>
                     <a href="https://jarenegado.github.io/jan/" class="nav-button">About</a>
-                    <a href="#gallery" class="nav-button" onclick="toggleGallery()">Gallery</a>
+                    <a href="https://github.com/jarenegado/jan/blob/main/index.md" class="nav-button">Gallery</a>
                     <a href="#blog" class="nav-button">Blog</a>
                     <a href="#contact" class="nav-button">Contact</a>
                 </p>
@@ -174,46 +129,6 @@
             <a href="mailto:janice.renegado@outlook.com">Email Me</a>
         </p>
      </div>
-    
-        <section id="gallery" class="gallery-section">
-            <h2>My Travel Gallery</h2>
-            <div class="gallery-grid">
-                <img src="ja10.jpg" alt="Travel Image 1">
-                <img src="ja12.jpg" alt="Travel Image 2">
-                <img src="ja13.jpg" alt="Travel Image 3">
-                <img src="ja14.jpg" alt="Travel Image 4">
-                <img src="ja16.jpg" alt="Travel Image 5">
-                <img src="ja17.jpg" alt="Travel Image 5">
-                <img src="ja20.jpg" alt="Travel Image 5">
-                <img src="ja21.jpg" alt="Travel Image 5">
-                <img src="ja24.jpg" alt="Travel Image 5">
-                <img src="ja25.jpg" alt="Travel Image 5">
-                <img src="ja27.jpg" alt="Travel Image 5">
-                <img src="ja28.jpg" alt="Travel Image 5">
-                <img src="ja29.jpg" alt="Travel Image 5">
-                <img src="ja3.jpg" alt="Travel Image 5">
-                <img src="ja30.jpg" alt="Travel Image 5">
-                <img src="ja31.jpg" alt="Travel Image 5">
-                <img src="ja32.jpg" alt="Travel Image 5">
-                <img src="ja4.jpg" alt="Travel Image 5">
-                <img src="ja5.jpg" alt="Travel Image 5">
-                <img src="ja6.jpg" alt="Travel Image 5">
-                <img src="ja8.jpg" alt="Travel Image 5">
-                <img src="ja9.jpg" alt="Travel Image 5">
-            </div>
-             <p>
-            <a href="https://jarenegado.github.io/ja/" target="_blank">Back</a> |
-             </p>
-        </section>
-    </div>
-    
-    <script>
-       
-            document.querySelector(".nav-button[href='#gallery']").addEventListener("click", function(event) {
-            event.preventDefault();
-            document.querySelector("#gallery").style.display = "block";
-            document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
-        });
      </script>
 </body>
 </html>
