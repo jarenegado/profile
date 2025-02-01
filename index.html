@@ -101,16 +101,20 @@
             flex-direction: column;
             min-height: 100vh;
               }
-         .icon {
-            width: 20px;
-            height: 20px;
-            margin: 40px;
-           transition: transform 0.3s ease;
-         }
-
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+            transition: transform 0.3s ease;
+             }
+        .icon img {
+            width: 100px;
+            height: auto;
+            }
         .icon:hover {
            transform: scale(1.2);
-         }
+            }
 
         footer {
             background-color: #333;
