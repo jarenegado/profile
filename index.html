@@ -85,19 +85,43 @@
             flex-direction: column;
             min-height: 100vh;
               }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+             }
         .icon {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 30px; 
+            position: relative;
+            cursor: pointer;
             transition: transform 0.3s ease;
              }
+        .icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+            }
         .icon img {
             width: 20px;
             height: auto;
             }
-        .icon:hover {
-           transform: scale(1.2);
+        .icon:hover::after {
+            opacity: 1;
             }
 
         footer {
@@ -141,16 +165,29 @@
     </script>
      <div class= "footer">
         <p>&copy; 2025 Janice Travels. All Rights Reserved.</p>
-     <div class= "icon">
-            <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" alt="GitHub" width="40">
+     <div class= "icon-container">
+                <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" class="icon" width="50" onmouseover="showTooltip(event, 'GitHub - My Website')" onmouseout="hideTooltip()"
             <div class= "icon">
-                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"> <img src="linkedin.png" alt="LinkedIn" width="40">
+                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"><img src="linkedin.png" class="icon" width="50" onmouseover="showTooltip(event, 'LinkedIn - View my profile')" onmouseout="hideTooltip()">
             <div class= "icon">
-                    <a href="https://www.facebook.com/jarngd" target="_blank"> <img src="facebook.png" alt="Facebook" width="40">
+                <a href="https://www.facebook.com/jarngd" target="_blank"><img src="facebook.png" class="icon" width="50" onmouseover="showTooltip(event, 'Facebook - Connect with us')" onmouseout="hideTooltip()">
             <div class= "icon">
-                        <a href="mailto:janice.renegado@outlook.com"><img src="email.png" alt="GitHub" width="40"></a>
+                <a href="mailto:janice.renegado@outlook.com"><img src="email.png" class="icon" width="50" onmouseover="showTooltip(event, 'Email - Send me Email')" onmouseout="hideTooltip()">
             </div>
+                    <div id="tooltip" class="tooltip"></div>
        </div>
-            
+            <script>
+  function showTooltip(event, text) {
+    let tooltip = document.getElementById("tooltip");
+    tooltip.innerText = text;
+    tooltip.style.left = event.pageX + "px";
+    tooltip.style.top = event.pageY - 30 + "px";
+    tooltip.style.visibility = "visible";
+  }
+
+  function hideTooltip() {
+    document.getElementById("tooltip").style.visibility = "hidden";
+  }
+</script>
 </body> 
 </html>
