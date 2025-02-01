@@ -166,28 +166,16 @@
      <div class= "footer">
         <p>&copy; 2025 Janice Travels. All Rights Reserved.</p>
      <div class= "icon-container">
-                <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" class="icon" width="50" onmouseover="showTooltip(event, 'GitHub - My Website')" onmouseout="hideTooltip()"
+                <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" class="icon" data-tooltip="GitHub - This is Website" width="50">
             <div class= "icon">
-                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"><img src="linkedin.png" class="icon" width="50" onmouseover="showTooltip(event, 'LinkedIn - View my profile')" onmouseout="hideTooltip()">
+                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"><img src="linkedin.png" class="icon" data-tooltip="LinkedIn - View my profile" width="50">
             <div class= "icon">
-                <a href="https://www.facebook.com/jarngd" target="_blank"><img src="facebook.png" class="icon" width="50" onmouseover="showTooltip(event, 'Facebook - Connect with us')" onmouseout="hideTooltip()">
+                <a href="https://www.facebook.com/jarngd" target="_blank"><img src="facebook.png" class="icon" data-tooltip="Facebook - View my FB Profile" width="50">
             <div class= "icon">
-                <a href="mailto:janice.renegado@outlook.com"><img src="email.png" class="icon" width="50" onmouseover="showTooltip(event, 'Email - Send me Email')" onmouseout="hideTooltip()">
+                <a href="mailto:janice.renegado@outlook.com"><img src="email.png" class="icon" data-tooltip="Email - Send me Email" width="50">
             </div>
-                    <div id="tooltip" class="tooltip"></div>
-       </div>
-            <script>
-  function showTooltip(event, text) {
-    let tooltip = document.getElementById("tooltip");
-    tooltip.innerText = text;
-    tooltip.style.left = event.pageX + "px";
-    tooltip.style.top = event.pageY - 30 + "px";
-    tooltip.style.visibility = "visible";
-  }
 
-  function hideTooltip() {
-    document.getElementById("tooltip").style.visibility = "hidden";
-  }
-</script>
+       </div>
+
 </body> 
 </html>
