@@ -27,6 +27,7 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
+             cursor: grab;
         }
         iframe {
             width: 100%;
@@ -41,18 +42,7 @@
             position: relative;
             z-index: 2;
         }
-       .icon {
-            width: 10px;
-            height: 10px;
-            margin: 40px;
-           transition: transform 0.3s ease;
-         }
-
-        .icon:hover {
-           transform: scale(1.2);
-         }
-
-        .logo{
+              .logo{
             max-width: 350px;
             margin-bottom: 20px;
         }
@@ -111,6 +101,17 @@
             flex-direction: column;
             min-height: 100vh;
               }
+         .icon {
+            width: 20px;
+            height: 20px;
+            margin: 40px;
+           transition: transform 0.3s ease;
+         }
+
+        .icon:hover {
+           transform: scale(1.2);
+         }
+
         footer {
             background-color: #333;
             color: #fff;
