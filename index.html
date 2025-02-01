@@ -92,13 +92,9 @@
             gap: 20px;
              }
         .icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px; 
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            .icon {
+    position: relative;
+    cursor: pointer;
              }
         .icon::after {
     content: attr(data-tooltip);
@@ -115,11 +111,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-            }
-        .icon img {
-            width: 20px;
-            height: auto;
-            }
+                  }
         .icon:hover::after {
             opacity: 1;
             }
