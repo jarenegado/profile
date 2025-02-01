@@ -85,35 +85,19 @@
             flex-direction: column;
             min-height: 100vh;
               }
-
-        .icon-container {
+        .icon {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            gap: 30px; 
+            transition: transform 0.3s ease;
              }
-        .icon {
-            .icon {
-    position: relative;
-    cursor: pointer;
-             }
-        .icon::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: black;
-    color: white;
-    padding: 5px 8px;
-    font-size: 12px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-                  }
-        .icon:hover::after {
-            opacity: 1;
+        .icon img {
+            width: 20px;
+            height: auto;
+            }
+        .icon:hover {
+           transform: scale(1.2);
             }
 
         footer {
@@ -157,17 +141,16 @@
     </script>
      <div class= "footer">
         <p>&copy; 2025 Janice Travels. All Rights Reserved.</p>
-     <div class= "icon-container">
-                <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" class="icon" data-tooltip="GitHub - This is Website" width="50">
+     <div class= "icon">
+            <a href="https://jarenegado.github.io/ja/" target="_blank"><img src="github.png" alt="GitHub" width="40">
             <div class= "icon">
-                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"><img src="linkedin.png" class="icon" data-tooltip="LinkedIn - View my profile" width="50">
+                <a href="https://www.linkedin.com/in/janice-renegado-185376258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEZmx%2F8%2BsRoeNPNChQ%2BswkQ%3D%3D" target="_blank"> <img src="linkedin.png" alt="LinkedIn" width="40">
             <div class= "icon">
-                <a href="https://www.facebook.com/jarngd" target="_blank"><img src="facebook.png" class="icon" data-tooltip="Facebook - View my FB Profile" width="50">
+                    <a href="https://www.facebook.com/jarngd" target="_blank"> <img src="facebook.png" alt="Facebook" width="40">
             <div class= "icon">
-                <a href="mailto:janice.renegado@outlook.com"><img src="email.png" class="icon" data-tooltip="Email - Send me Email" width="50">
+                        <a href="mailto:janice.renegado@outlook.com"><img src="email.png" alt="GitHub" width="40"></a>
             </div>
-
        </div>
-
+            
 </body> 
 </html>
